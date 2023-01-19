@@ -15,7 +15,7 @@ const Edit = (props) => {
 
     return (
         <div>
-            <button className='post' onClick={props.handleShowEdit}>Done Editting</button>
+            <button className='post' onClick={props.handleShowEdit}>Close</button>
             <form onSubmit={handleSubmit} className='edit'>
                 <label>Name: </label>
                 <br></br>
@@ -43,7 +43,7 @@ const Edit = (props) => {
                 <br></br>
                 <input type='submit' className='post'></input>
             </form>
-            <button onClick={props.handleDelete} className='post'>Delete posting</button>
+            <button onClick={props.handleDelete} className='post' value={props.robot.id}>Delete posting</button>
         </div>
     )
 }

@@ -15,27 +15,35 @@ const Add = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <div className='close'>
+                <button onClick={props.handleShowAdd}>Close form</button>
+            </div>
+            <form onSubmit={handleSubmit} className='edit'>
                 <label>Name: </label>
+                <br></br>
                 <input type='text' name='name' value={robot.name} onChange={handleChange}></input>
                 <br></br>
 
                 <label>Price: </label>
-                <input type='number' name='price' value={robot.price} onChange={handleChange}></input>
+                <br></br>
+                $<input type='number' name='price' value={robot.price} onChange={handleChange}></input>
                 <br></br>
 
                 <label>Shipping Cost: </label>
-                <input type='number' name='shippingCost' value={robot.shippingCost} onChange={handleChange}></input>
+                <br></br>
+                $<input type='number' name='shippingCost' value={robot.shippingCost} onChange={handleChange}></input>
                 <br></br>
 
                 <label>Estimated Arrival Time: </label>
+                <br></br>
                 <input type='text' name='shippingDate' value={robot.shippingDate} onChange={handleChange}></input>
                 <br></br>
 
                 <label>Image Link: </label>
+                <br></br>
                 <input type='text' name='image' value={robot.image} onChange={handleChange}></input>
                 <br></br>
-                <input type='submit'></input>
+                <input type='submit' className='post'></input>
             </form>
         </div>
     )

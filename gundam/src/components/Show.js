@@ -11,6 +11,7 @@ const Show = (props) => {
 
     const handleShow = () => {
         setShowInfo(!showInfo)
+        setShowEdit(false)
     }
 
     const handleShowEdit = () => {
